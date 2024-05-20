@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-
-  return (
-    <>
-        <div><button>뒤로 가기</button> <button>메인으로 가기</button></div>
-    </>
-  );
-}
+    const navigate = useNavigate();
+    return (
+        <>
+            <div>
+                <button onClick={() => navigate(-1)}>뒤로 가기</button>
+                <button onClick={() => navigate('/Main')}>메인으로 가기</button>
+            </div>
+        </>
+    );
+};
 
 export default Header;
